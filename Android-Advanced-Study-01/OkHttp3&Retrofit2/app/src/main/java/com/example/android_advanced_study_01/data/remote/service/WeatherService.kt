@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WeatherService {
-    @GET("")
+    @GET("/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst")
     suspend fun getWeather(
         @Query("serviceKey") serviceKey: String,
         @Query("pageNo") pageNo: Int,
