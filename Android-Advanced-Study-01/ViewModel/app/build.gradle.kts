@@ -7,6 +7,10 @@ android {
     namespace = "com.example.viewmodel"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.viewmodel"
         minSdk = 30
