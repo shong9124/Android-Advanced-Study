@@ -12,5 +12,5 @@ interface WeatherRepository {
         base_time: String,
         nx: Int,
         ny: Int
-    ) : Result<WeatherResponse>
+    ) : Result<List<WeatherResponse>>
 }

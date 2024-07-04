@@ -50,9 +50,15 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    // retrofit2 + okhttp
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
 
     implementation("com.facebook.shimmer:shimmer:0.5.0")
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.activity:activity-ktx:1.9.0")
+    implementation("androidx.fragment:fragment-ktx:1.7.0")
 }

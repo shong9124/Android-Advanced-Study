@@ -18,16 +18,16 @@ class WeatherRepositoryImpl : WeatherRepository {
         base_time: String,
         nx: Int,
         ny: Int
-    ): Result<WeatherResponse> {
+    ): Result<List<WeatherResponse>> {
         val res
         = service.getWeather(serviceKey, pageNo, numOfRows, dataType, base_date, base_time, nx, ny)
-
         return if (res.isSuccessful) {
             if (res.body() == null) {
                 Result.success(listOf())
             }
             else {
-                Result.success(res.body()!!)
+                Log.d("RES", "${res.body()}")
+                Result.success(listOf(res.body()!!))
             }
         }
         else {
